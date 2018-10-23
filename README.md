@@ -7,7 +7,7 @@
 Using library CropperJS for inputs with drag&drop.
 
 # Install
-```
+```npm
 npm install @imluckyjr/input-cropperjs
 ```
 
@@ -27,7 +27,7 @@ Script make parent element of input droppable for dragging image. Also you can c
 
 ### HTML
 ```HTML
-<div id="" class="" data-target="#photo" data-ratio="1">
+<div id="" class="">
   <div class="mt-3">
     <img src="your_url" class="js-image-preview">
   </div>
