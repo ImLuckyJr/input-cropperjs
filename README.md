@@ -28,12 +28,12 @@ Script make parent element of input droppable for dragging image. Also you can c
 ### HTML
 ```HTML
 <div id="" class="" data-target="#photo" data-ratio="1">
-  <label for="image-cropper651424photo" class="btn btn-outline-primary">
-    <i class="fas fa-camera"></i>
-  </label> 
-  <input type="file" id="image-cropper651424photo" class="js-cropper">
   <div class="mt-3">
     <img src="your_url" class="js-image-preview">
+  </div>
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
   </div>
 </div>
 ```
