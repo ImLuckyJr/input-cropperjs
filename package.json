@@ -1,6 +1,6 @@
 {
   "name": "@imluckyjr/input-cropperjs",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Dropzone and cropping for inputs",
   "main": "index.js",
   "scripts": {

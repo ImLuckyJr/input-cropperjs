@@ -114,7 +114,7 @@ import Cropper from 'cropperjs';
                 let base64data = reader.result;
                 $('.js-image-base64:eq(' + id + ')').val(base64data);
                 if (null !== settings['image-preview']) {
-                  $('.js-image-preview:eq(' + id + ')').attr('src', base64data);
+                  $(settings['image-preview'] + ':eq(' + id + ')').attr('src', base64data);
                 }
               }
             });
@@ -136,6 +136,7 @@ import Cropper from 'cropperjs';
 
     ['drag', 'dragstart', 'dragend', 'dragover', 'dragenter', 'dragleave', 'drop'].forEach((event) => {
       _thisParent.addEventListener(event, function (e) {
+        // preventing the unwanted behaviours
         e.preventDefault();
         e.stopPropagation();
       });
@@ -172,6 +173,7 @@ import Cropper from 'cropperjs';
   $.fn.cropperImage = function (options) {
     let selector = $(this).getSelector();
     settings = $.extend({
+      'input-name': '',
       'image-preview': null
     }, options);
     $('body').append(cropperModalDOM);
