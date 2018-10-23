@@ -2,7 +2,6 @@
 
 
 [![npm (scoped)](https://img.shields.io/npm/v/@imluckyjr/input-cropperjs.svg)](https://github.com/ImLuckyJr/input-cropperjs)
-[![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/@imluckyjr/input-cropperjs.svg)](https://github.com/ImLuckyJr/input-cropperjs)
 
 Using library CropperJS for inputs with drag&drop.
 
