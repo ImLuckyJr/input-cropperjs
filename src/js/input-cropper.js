@@ -173,15 +173,16 @@ import Cropper from 'cropperjs';
   $.fn.cropperImage = function (options) {
     let selector = $(this).getSelector();
     settings = $.extend({
-      'input-name': '',
       'image-preview': null
     }, options);
     $('body').append(cropperModalDOM);
     return this.each(function (index) {
-      $(this).after('<input type="hidden" class="js-image-base64" name="' + settings['input-name'] + '[]" id="' + settings['input-name'] + '-' + index + '">');
+      let inputName = $(this).attr('name'),
+        inputId = $(this).attr('id');
+      $(this).after('<input type="hidden" class="js-image-base64" name="' + inputName + '" id="' + inputId + '--hidden">');
+      $(this).attr('name', '');
       cropperFunction.apply(this, [selector]);
     });
   };
 
 })(jQuery, window, document, Cropper);
-
