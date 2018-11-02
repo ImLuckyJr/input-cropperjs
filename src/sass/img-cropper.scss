@@ -1,0 +1,7 @@
+@import "~cropperjs/dist/cropper.css";
+
+.is-dragover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .55);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .55);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .55);
+}
