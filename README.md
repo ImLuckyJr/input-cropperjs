@@ -9,38 +9,40 @@ Using library CropperJS for inputs with drag&drop.
 ```npm
 npm install @imluckyjr/input-cropperjs
 ```
-
+Script make parent element of input droppable with class 'is-dragover' for dragging image. Also you can choose file.
 # Usage
 
 ```js
 //selector of input
-$(selector).cropperImage({
-  'input-name': name, //name for hidden input created by script that you could upload image(s) to server
-  'image-preview': imagePreviewSelector //optional parameter for output cropped image
-});
+$(selector).cropperImage([options]);
 ```
 
-Script make parent element of input droppable with class 'is-dragover' for dragging image. Also you can choose file.
+# Options
+### input-previews
+- Type `boolean`
+- Default `false`
+
+`True` says that there are preview blocks for every input with `selector`. 
+
+_Each preview block must have ID like `photo-input-preview`, where `photo-input` is ID of input._
 
 # Example
 
 ### HTML
 ```HTML
 <div id="" class="">
-  <div class="mt-3">
-    <img src="your_url" class="js-image-preview">
-  </div>
+  <div class="mt-3 js-image-preview" id="custom-file-input-preview" style="background-image: url(YOUR_URL)"></div>
   <div class="custom-file">
-    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+    <input type="file" class="js-cropper custom-file-input" id="custom-file-input">
+    <label class="custom-file-label" for="custom-file-input">Choose file</label>
   </div>
 </div>
+
 ```
 
 ### JS
 ```js
 $('.js-cropper').cropperImage({
-  'input-name': 'photo',
-  'image-preview': '.js-image-preview'
+  'input-previews': true
 });
 ```
