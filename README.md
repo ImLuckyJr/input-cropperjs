@@ -20,7 +20,7 @@ $(selector).cropperImage({
 });
 ```
 
-Script make parent element of input droppable for dragging image. Also you can choose file.
+Script make parent element of input droppable with class 'is-dragover' for dragging image. Also you can choose file.
 
 # Example
 
